@@ -4,6 +4,7 @@
   width: 181px;
   height: 120px;
   display: inline-block;
+  margin-left: 50px;
 }
 .home_icon {
   background: url('../../../assets/home.png') no-repeat center;
@@ -39,11 +40,15 @@
   height: 100px;
   display: flex;
   align-items: center;
-  border-left: 5px solid transparent;
+  border-left: 10px solid transparent;
+  cursor: pointer;
 }
 .box:hover{
    background: #122143;
-   border-left: 5px solid #5584ff;
+   border-left: 10px solid #5584ff;
+}
+.box .holder:first-child{
+  margin-left: 50px;
 }
 .box .holder {
   margin-left: 20px;
