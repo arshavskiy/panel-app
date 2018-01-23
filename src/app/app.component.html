@@ -1,37 +1,18 @@
-<div class="container-fluid">
-  <div class="row">
-  <nav class="col">
+  <nav>
     <app-main-nav></app-main-nav>
   </nav>
 
-  <div class="col">
+  <section class="top-nav">
+    <app-nav-bar></app-nav-bar>
+  </section>
 
-    <div class="container-fluid">
-      <app-nav-bar></app-nav-bar>
-    </div>
+  <main>
 
-    <div class="row">
-      <div class="col">
-        <app-sales></app-sales>
-      </div>
+    <app-sales></app-sales>
+    <app-graph></app-graph>
 
-      <div class="col">
-        <app-graph></app-graph>
-      </div>
-    </div>
+    <app-tasks></app-tasks>
+    <app-messages></app-messages>
+    <app-activity></app-activity>
 
-    <div class="row">
-      <div class="col">
-        <app-tasks></app-tasks>
-      </div>
-      <div class="col">
-        <app-messages></app-messages>
-      </div>
-      <div class="col">
-        <app-activity></app-activity>
-      </div>
-
-    </div>
-  </div>
-  </div>
-</div>
+  </main>

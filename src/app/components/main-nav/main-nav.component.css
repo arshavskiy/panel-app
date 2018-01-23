@@ -1,19 +1,49 @@
-.home_icon {
-  background: url('../../../assets/home.png') no-repeat center;
-  width: 24px;
-  height: 21px;
-  display: inline-block;
-}
+
 .logo {
   background: url('../../../assets/logo.png') no-repeat center;
   width: 181px;
   height: 120px;
   display: inline-block;
 }
+.home_icon {
+  background: url('../../../assets/home.png') no-repeat center;
+  width: 24px;
+  height: 21px;
+  display: inline-block;
+}
+.user_icon {
+  background: url('../../../assets/user.png') no-repeat center;
+  width: 24px;
+  height: 21px;
+  display: inline-block;
+}
+.calendar_icon {
+  background: url('../../../assets/calendar.png') no-repeat center;
+  width: 24px;
+  height: 21px;
+  display: inline-block;
+}
+.workflow_icon {
+  background: url('../../../assets/workflow.png') no-repeat center;
+  width: 24px;
+  height: 21px;
+  display: inline-block;
+}
+.stats_icon {
+  background: url('../../../assets/stats.png') no-repeat center;
+  width: 24px;
+  height: 21px;
+  display: inline-block;
+}
 .box {
   height: 100px;
   display: flex;
   align-items: center;
+  border-left: 5px solid transparent;
+}
+.box:hover{
+   background: #122143;
+   border-left: 5px solid #5584ff;
 }
 .box .holder {
   margin-left: 20px;
