@@ -7,7 +7,7 @@ nav{
   width: 300px;
 }
 
-.top-nav{
+app-nav-bar{
   position: fixed;
   top: 0;
   right: 0;
