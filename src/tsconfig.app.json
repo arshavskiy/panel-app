@@ -6,6 +6,15 @@
     "module": "es2015",
     "types": []
   },
+  "include": [
+    "../src/**/*",
+    "../models/**/*.ts",
+    "../node_modules/@sni/sui/*",
+    "../node_modules/*"
+  ],
+//  "files": [
+//    "../node_modules/angular2-google-chart/directives/angular2-google-chart.directive.ts"
+//  ],
   "exclude": [
     "test.ts",
     "**/*.spec.ts"

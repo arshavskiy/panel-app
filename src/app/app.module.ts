@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// import {GoogleChart} from 'angular2-google-chart/directives/angular2-google-chart.directive';
 
 
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     MessagesComponent,
     ActivityComponent,
     NavBarComponent
+    // GoogleChart
   ],
   imports: [
     BrowserModule

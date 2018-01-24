@@ -1,0 +1,11 @@
+.title-holder {
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  margin-left:30px;
+  color: #8492af;
+}
+.title h1{
+  font-weight: bold;
+}
