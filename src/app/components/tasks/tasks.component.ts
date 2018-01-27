@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ServerService} from '../../services/server.service';
+
 
 @Component({
   selector: '[app-tasks]',
@@ -7,15 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasksComponent implements OnInit {
   date: any;
-  title = "rrrr";
+  title = 'rrrr';
 
-  constructor() { }
+  constructor(private serverService: ServerService) { }
 
   ngOnInit() {
 
-    this.date = this.dateBuilder(2012,1,0);
-    console.log(this.date);
+    this.serverService
+      .getTasks()
+      .subscribe( (res)=>{
+        console.log(res);
+      } );
 
+
+    this.date = this.dateBuilder(2012, 1, 0);
   }
 
 
