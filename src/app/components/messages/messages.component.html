@@ -1,3 +1,8 @@
-<p>
-  messages works!
-</p>
+<h4> {{title}} </h4>
+
+<div *ngFor="let u of users; let i = index">
+  <div class="messege" *ngIf="i<5">
+    <div> {{u.name}} <span class="timeS">2 days ego</span></div>
+    <div> {{u.website}} </div>
+  </div>
+</div>

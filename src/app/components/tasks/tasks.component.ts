@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ServerService} from '../../services/server.service';
-
 
 @Component({
   selector: '[app-tasks]',
@@ -9,30 +8,44 @@ import {ServerService} from '../../services/server.service';
 })
 export class TasksComponent implements OnInit {
   date: any;
-  title = 'rrrr';
+  title = 'Tasks';
+  tasks: any;
+  lenToDo = 0;
 
-  constructor(private serverService: ServerService) { }
+  constructor(private serverService: ServerService) {
+  }
 
   ngOnInit() {
 
     this.serverService
-      .getTasks()
-      .subscribe( (res)=>{
-        console.log(res);
-      } );
+      .getTasks().subscribe((res) => {
+      const data = res;
+      this.tasks = data;
+      // this.tasks.len = this.tasks.length;
+    });
 
+    this.taskCompleted();
 
     this.date = this.dateBuilder(2012, 1, 0);
   }
 
+  taskCompleted() {
 
-  dateBuilder(y:number,d:number,m:number){
+    if (this.tasks) {
+      for (let i in this.tasks) {
+        if (this.tasks[0].completed) {
+          this.lenToDo++;
+        }
+      }
+        console.log(this.lenToDo);
+      debugger;
+    }
+  }
+
+  dateBuilder(y: number, d: number, m: number) {
     var newDate = new Date(y, d, m);
     return newDate;
   }
-
-
-
 
 
 }

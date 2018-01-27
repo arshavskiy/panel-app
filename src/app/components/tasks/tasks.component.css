@@ -1,0 +1,28 @@
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+.padd-10{
+  padding:10px;
+}
+
+.tasks span{
+}
+
+h6{
+  font-weight: bold;
+}
+
+.roundNumber{
+  background: red;
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight:bold;
+  color: #fff;
+  font-size:0.8em;
+}
