@@ -21,8 +21,9 @@ export class TasksComponent implements OnInit {
 
   dateBuilder(y:number,d:number,m:number){
     var newDate = new Date(y, d, m);
-    return newDate
+    return newDate;
   }
+
 
 
 

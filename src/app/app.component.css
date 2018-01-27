@@ -39,15 +39,15 @@ main{
 }
 
 div[app-sales]{
-  width: 581px;
-  height: 473px;
+  width: 40%;
+  height: 470px;
   border: 1px solid  rgb(132, 146, 175);
   background-color: rgb(255, 255, 255);
 }
 
 div[app-graph]{
-  width: 891px;
-  height: 473px;
+  width: 50%;
+  height: 470px;
   border: 1px solid  rgb(132, 146, 175);
   background-color: rgb(255, 255, 255);
 }
@@ -57,7 +57,7 @@ div[app-tasks],div[app-messages], div[app-activity] {
   border-width: 1px;
   border-color: rgb(132, 146, 175);
   background-color: rgb(255, 255, 255);
-  width: 478px;
+  width: 30%;
   height: 527px;
 }
 
