@@ -5,7 +5,7 @@
   font-size: 0.9em;
 }
 
-nav{
+nav {
   position: fixed;
   height: 100%;
   background: #0e1a35;
@@ -13,7 +13,22 @@ nav{
   width: 300px;
 }
 
-app-nav-bar{
+main {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  top: 120px;
+  margin-left: 300px;
+  background: #f6f7fa;
+  transition: all 0.2s ease-in-out;
+  padding: 15px;
+}
+
+main>div{
+  border:none;
+}
+
+app-nav-bar {
   position: fixed;
   top: 0;
   right: 0;
@@ -28,16 +43,6 @@ app-nav-bar{
   transition: all 0.2s ease-in-out;
 }
 
-main{
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  top: 120px;
-  margin-left: 300px;
-  background: #fff;
-  transition: all 0.2s ease-in-out;
-  padding: 15px;
-}
 
 div[app-sales]{
   width: 40%;

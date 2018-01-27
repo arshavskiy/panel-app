@@ -1,10 +1,23 @@
 .flex-between{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.padd-10{
-  padding:10px;
+.info_bar{
+  height:90px;
+  padding-left:35px;
+  padding-right:25px;
+}
+
+.header{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.info_holder{
+  height:110px;
+  padding-left:35px;
 }
 
 .tasks span{
@@ -14,15 +27,30 @@ h6{
   font-weight: bold;
 }
 
-.roundNumber{
-  background: red;
+.roundNumber, .roundNumber-big{
   border-radius: 50%;
-  width: 21px;
-  height: 21px;
+  width: 45px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight:bold;
   color: #fff;
-  font-size:0.8em;
+  font-size:1.4em;
+  margin:0 5px
+}
+
+.roundNumber-big{
+  width: 50px;
+  height: 50px;
+  font-size:1.6em;
+
+}
+
+.blue{
+  background: #5384ff;
+}
+
+.pink{
+  background: #f83c7b;
 }

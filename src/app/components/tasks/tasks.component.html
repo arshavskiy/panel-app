@@ -1,11 +1,20 @@
-<div class="flex-between">
-  <h6>{{title}}</h6>
-<span class="roundNumber" *ngIf="tasks">  {{tasks.length/10}} </span>
+<div class="flex-between info_bar">
+  <span class="header">{{title}}</span>
+  <span style="display: flex;">
+    <span class="roundNumber blue" *ngIf="tasks">  {{tasks.length/10}} </span>
+    <span class="roundNumber pink" *ngIf="tasks">  {{tasks.length/5}} </span>
+  </span>
 </div>
 
 <div *ngFor="let t of tasks; let i = index">
-  <div class="flex-between" *ngIf="i<5">
-    <span> {{t.title}} </span>
-    <span> {{t.completed}} </span>
+  <div *ngIf="i < 4" class=" ">
+
+    <div class="flex-between info_holder">
+      <div class="roundNumber-big blue">
+        N
+      </div>
+      <span> {{t.title}} </span>
+      <span> {{t.completed}} </span>
+    </div>
   </div>
 </div>
