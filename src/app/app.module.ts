@@ -21,14 +21,12 @@ import { ChartsModule } from 'ng2-charts';
     TasksComponent,
     MessagesComponent,
     ActivityComponent,
-    NavBarComponent,
-    ChartsModule
-
-
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    ChartsModule
 
   ],
   providers: [ServerService],
