@@ -10,7 +10,7 @@ import { ActivityComponent } from './components/activity/activity.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ServerService } from './services/server.service';
-
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -22,6 +22,7 @@ import { ServerService } from './services/server.service';
     MessagesComponent,
     ActivityComponent,
     NavBarComponent,
+    ChartsModule
 
 
   ],
