@@ -10,30 +10,26 @@ nav {
   height: 100%;
   background: #0e1a35;
   color: white;
-  width: 300px;
+  width: 260px;
 }
 
 main {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  top: 120px;
-  margin-left: 300px;
+  top: 80px;
+  margin-left: 260px;
   background: #f6f7fa;
   transition: all 0.2s ease-in-out;
   padding: 15px;
-}
-
-main>div{
-  border:1px solid rgba(132, 146, 175, 0.3);
 }
 
 app-nav-bar {
   position: fixed;
   top: 0;
   right: 0;
-  left: 300px;
-  height: 120px;
+  left: 260px;
+  height: 80px;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -43,29 +39,32 @@ app-nav-bar {
   transition: all 0.2s ease-in-out;
 }
 
+.graph-holder{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
 div[app-sales]{
   width: 40%;
   height: auto;
-  border: 1px solid  rgb(132, 146, 175);
+  border:1px solid rgba(132, 146, 175, 0.3);
   background-color: rgb(255, 255, 255);
 }
 
 div[app-graph]{
   width: 50%;
   height: auto;
-  border: 1px solid  rgb(132, 146, 175);
+  border:1px solid rgba(132, 146, 175, 0.3);
   background-color: rgb(255, 255, 255);
+
 }
 
 div[app-tasks],div[app-messages], div[app-activity] {
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(132, 146, 175);
-  background-color: rgb(255, 255, 255);
-  height: 527px;
+  border:1px solid rgba(132, 146, 175, 0.3);
+
 }
 
-.m-20{
-  margin: 20px;
+.m-10{
+  margin: 10px;
 }

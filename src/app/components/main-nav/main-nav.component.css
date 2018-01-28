@@ -2,10 +2,11 @@
 .logo {
   background: url('../../../assets/logo.png') no-repeat center;
   width: 181px;
-  height: 115px;
+  height:75px;
   display: inline-block;
-  margin-left: 50px;
+  margin-left: 40px;
 }
+
 .home_icon {
   background: url('../../../assets/home.png') no-repeat center;
   width: 24px;
@@ -48,8 +49,9 @@
    border-left: 10px solid #5584ff;
 }
 .box .holder:first-child{
-  margin-left: 50px;
+  margin-left: 40px;
 }
+
 .box .holder {
   margin-left: 20px;
   height: 21px;
