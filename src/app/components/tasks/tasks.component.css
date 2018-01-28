@@ -38,6 +38,13 @@
   margin: 0 30px;
 }
 
+.clock_pink{
+  background: url('../../../assets/clock_pink.png') no-repeat center;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+}
+
 .task_info_title {
   font-size: 1.4em;
   text-transform: capitalize;
@@ -45,6 +52,7 @@
   font-weight: bold;
   color: rgb(14, 26, 53);
   line-height: 1.8em;
+
 }
 
 .task_info_stitle{
@@ -52,6 +60,9 @@
   font-family: "Roboto";
   color: rgb(248, 60, 123);
   line-height: 1.8em;
+  position: relative;
+  top: -4px;
+  margin-left: 5px;
 }
 
 h6{

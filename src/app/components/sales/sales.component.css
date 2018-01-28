@@ -1,7 +1,9 @@
 .title-holder {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
+
 .title{
   margin-left:10px;
   margin-top:10px;
@@ -11,10 +13,12 @@
 .title h3{
   font-weight: bold;
 }
+
 .flex-between{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .flex-between-column{
@@ -24,7 +28,8 @@
 }
 
 .cart{
-  padding-right:50px;
+  position: relative;
+  right:30px;
 }
 
 .cart li {
@@ -35,7 +40,39 @@
   line-height: 1.2;
 }
 
-.flex-between canvas{
-  position: relative;
-  right:50px;
+/*.flex-between canvas{*/
+  /*position: relative;*/
+  /*right:50px;*/
+/*}*/
+
+.elips{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 7px;
+  width:140px;
+  cursor:pointer;
+}
+
+.caret{
+  background: url('../../../assets/caret.png') no-repeat center;
+  width: 12px;
+  height: 6px;
+  display: inline-block;
+
+}
+.g1{
+  flex-grow: 1;
+  padding-left:5px;
+}
+
+.elips b{
+  font-size: 0.8em;
+
+}
+
+.gray {
+  color:lightgray;
 }

@@ -5,18 +5,17 @@
       <h3>Your Sales</h3>
     </div>
     <div class="calendar">
-      <span>
-        <h5>Period:
-        <h6>last yesr</h6>
-        </h5>
-
+      <span class="elips ">
+        <b>Period:</b>
+        <b class="gray g1">last year</b>
+        <i class="caret"></i>
       </span>
     </div>
   </div>
 
   <div class="flex-between">
-    <div style="width: 300px;height: 150px; ">
-      <canvas baseChart
+    <div style="display: block">
+      <canvas baseChart height="250px"
               [data]="doughnutChartData"
               [chartType]="doughnutChartType"
               (chartHover)="chartHovered($event)"

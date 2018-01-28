@@ -46,14 +46,14 @@ app-nav-bar {
 
 div[app-sales]{
   width: 40%;
-  height: 400px;
+  height: auto;
   border: 1px solid  rgb(132, 146, 175);
   background-color: rgb(255, 255, 255);
 }
 
 div[app-graph]{
   width: 50%;
-  height: 400px;
+  height: auto;
   border: 1px solid  rgb(132, 146, 175);
   background-color: rgb(255, 255, 255);
 }
