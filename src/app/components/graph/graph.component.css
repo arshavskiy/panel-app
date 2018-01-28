@@ -1,0 +1,13 @@
+.title-holder {
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  margin-left:30px;
+  margin-top:10px;
+  color: #8492af;
+}
+
+.title h3{
+  font-weight: bold;
+}

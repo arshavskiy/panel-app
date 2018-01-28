@@ -3,9 +3,39 @@
   justify-content: space-between;
 }
 .title{
-  margin-left:30px;
+  margin-left:10px;
+  margin-top:10px;
   color: #8492af;
 }
-.title h1{
+
+.title h3{
   font-weight: bold;
+}
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-between-column{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.cart{
+  padding-right:50px;
+}
+
+.cart li {
+  padding-top:10px;
+  font-size: 1.2em;
+  font-family: "Roboto";
+  color: rgb(132, 146, 175);
+  line-height: 1.2;
+}
+
+.flex-between canvas{
+  position: relative;
+  right:50px;
 }
