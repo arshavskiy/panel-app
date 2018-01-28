@@ -37,6 +37,7 @@
   height: 33px;
   display: inline-block;
   margin: 0 30px;
+  cursor: pointer;
 }
 
 .msg-logo{
@@ -45,6 +46,23 @@
   height: 33px;
   display: inline-block;
   margin: 0 30px;
+}
+.arrow-l{
+  background: url('../../../assets/arrow-l.png') no-repeat center;
+  width: 18px;
+  height: 14px;
+  display: inline-block;
+  margin: 5px 5px 0 5px;
+  cursor: pointer;
+}
+
+.gear{
+  background: url('../../../assets/gear.png') no-repeat center;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  cursor: pointer;
+
 }
 
 .msg_info_title {
