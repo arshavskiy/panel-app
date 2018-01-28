@@ -6,11 +6,11 @@ export class ServerService {
 
   constructor(private http: HttpClient ) { }
 
-  getTasks(){
+  getTasks() {
     // return this.tasks;
     return this.http.get('https://jsonplaceholder.typicode.com/todos');
   }
-  getUsers(){
+  getMsg(){
     return this.http.get('https://jsonplaceholder.typicode.com/users');
 
   }

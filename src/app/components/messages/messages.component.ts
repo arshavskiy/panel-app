@@ -8,16 +8,17 @@ import {ServerService} from '../../services/server.service';
 })
 export class MessagesComponent implements OnInit {
 
-  users: any;
+  title: string = 'Messages';
+  messages: any;
 
   constructor(private serverService: ServerService) { }
 
   ngOnInit() {
 
     this.serverService
-      .getUsers().subscribe((res)=>{
+      .getMsg().subscribe((res)=>{
       const data = res;
-      this.users = data;
+      this.messages = data;
     });
 
 

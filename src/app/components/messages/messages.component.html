@@ -1,8 +1,26 @@
-<h4> {{title}} </h4>
+<div class="flex-between info_bar">
+  <span class="header">{{title}}</span>
+  <span style="display: flex;">
+    <span class="roundNumber blue" *ngIf="msgs">  {{msgs.length/10}} </span>
+  </span>
+</div>
 
-<div *ngFor="let u of users; let i = index">
-  <div class="messege" *ngIf="i<5">
-    <div> {{u.name}} <span class="timeS">2 days ego</span></div>
-    <div> {{u.website}} </div>
+<div *ngFor="let m of messages; let i = index">
+  <div *ngIf="i < 4" class=" ">
+
+    <div class="flex-between info_holder">
+      <div class="msg-logo roundNumber-big">
+       </div>
+      <div class="msg_info_holder">
+        <div>
+        <span class="msg_info_title"> {{m.name}} </span>
+        <span class="msg_info_time"> 2 days ego </span>
+        </div>
+        <span class="msg_info_stitle"> {{m.company.catchPhrase}} </span>
+      </div>
+      <div class="msg_info_menu">
+        <i class="dots-menu"></i>
+      </div>
+    </div>
   </div>
 </div>

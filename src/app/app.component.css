@@ -25,7 +25,7 @@ main {
 }
 
 main>div{
-  border:none;
+  border:1px solid rgba(132, 146, 175, 0.3);
 }
 
 app-nav-bar {
@@ -63,7 +63,6 @@ div[app-tasks],div[app-messages], div[app-activity] {
   border-width: 1px;
   border-color: rgb(132, 146, 175);
   background-color: rgb(255, 255, 255);
-  width: 30%;
   height: 527px;
 }
 
