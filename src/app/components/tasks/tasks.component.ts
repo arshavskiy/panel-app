@@ -33,7 +33,7 @@ export class TasksComponent implements OnInit {
 
     if (this.tasks) {
       for (let i in this.tasks) {
-        if (this.tasks[0].completed) {
+        if (this.tasks[i].completed) {
           this.lenToDo++;
         }
       }
@@ -46,6 +46,8 @@ export class TasksComponent implements OnInit {
     var newDate = new Date(y, d, m);
     return newDate;
   }
+
+
 
 
 }
