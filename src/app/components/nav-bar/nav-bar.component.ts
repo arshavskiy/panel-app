@@ -11,7 +11,6 @@ export class NavBarComponent implements  OnInit{
   }
 
   ngOnInit() {
-    document.body.classList.add('active');
   }
 
   toggle() {
