@@ -12,4 +12,7 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggle() {
+    console.log(event);
+  }
 }
