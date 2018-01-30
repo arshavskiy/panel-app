@@ -12,6 +12,11 @@ nav {
   color: white;
   width: 260px;
 }
+.active nav {
+  position: absolute;
+  right: -260px;
+}
+
 
 main {
   position: relative;
@@ -23,6 +28,7 @@ main {
   transition: all 0.2s ease-in-out;
   padding: 15px;
 }
+
 
 app-nav-bar {
   position: fixed;
@@ -38,6 +44,15 @@ app-nav-bar {
   z-index: 1000;
   transition: all 0.2s ease-in-out;
 }
+
+.active app-nav-bar{
+  left: 0;
+}
+
+
+
+
+
 
 .graph-holder{
   width: 100%;
