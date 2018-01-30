@@ -21,6 +21,14 @@
   flex-wrap: wrap;
 }
 
+.flex-space{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
 .flex-between-column{
   display: flex;
   flex-direction: column;
@@ -32,10 +40,18 @@
   right:30px;
 }
 
+#sale-pie :after{
+  content: '1600';
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.7em;
+
+}
 .cart li {
   padding-top:10px;
-  font-size: 1.2em;
-  font-family: "Roboto";
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
   color: rgb(132, 146, 175);
   line-height: 1.2;
 }
@@ -69,7 +85,7 @@
 }
 
 .elips b{
-  font-size: 0.8em;
+  font-size: 1em;
 
 }
 

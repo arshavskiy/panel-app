@@ -34,7 +34,7 @@ app-nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 45px;
+  padding: 0 20px;
   z-index: 1000;
   transition: all 0.2s ease-in-out;
 }
@@ -68,4 +68,5 @@ div[app-tasks],div[app-messages], div[app-activity] {
 
 .m-10{
   margin: 10px;
+  padding:0;
 }

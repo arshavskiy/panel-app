@@ -6,7 +6,7 @@
 
 .info_bar{
   height:90px;
-  padding-left:35px;
+  padding-left:15px;
   padding-right:15px;
 }
 
@@ -17,7 +17,7 @@
 
 .info_holder{
   height:110px;
-  padding-left:35px;
+  padding-left:15px;
   border:1px solid rgba(132, 146, 175, 0.1);
 }
 
@@ -29,6 +29,16 @@
   flex-direction: column;
   flex-grow: 1;
   margin-left:20px;
+}
+
+@media (max-width: 1400px){
+  .task_info_menu{
+    margin:0;
+  }
+  .msg_info_holder{
+    margin:0;
+  }
+
 }
 
 .dots-menu{
@@ -96,6 +106,8 @@ h6{
   border-radius: 50%;
   width: 45px;
   height: 45px;
+  flex-basis: 45px;
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;

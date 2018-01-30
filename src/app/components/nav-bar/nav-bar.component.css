@@ -1,6 +1,102 @@
 section{
-  height:80px;
   width:100%;
   padding:0;
   margin:0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+.flex-space{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+}
+
+
+.elips{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #5584ff;
+  border-radius: 20px;
+  padding: 9px;
+  width:140px;
+  cursor:pointer;
+  color:white;
+  background: #5584ff;
+}
+
+.caret{
+  background: url('../../../assets/caret.png') no-repeat center;
+  width: 12px;
+  height: 6px;
+  display: inline-block;
+
+}
+.g1{
+  flex-grow: 1;
+  padding-left:5px;
+}
+
+.elips b{
+  font-size: 1em;
+  padding-right: 10px;
+
+}
+
+.gray {
+  color:lightgray;
+}
+
+.nav_btn{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.nav_add-btn{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 240px;
+}
+
+.btn {
+  background: url('../../../assets/btn.png') no-repeat center;
+  width: 39px;
+  height:21px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.nav_search-elm{
+  background: url('../../../assets/search.png') no-repeat center;
+  width: 24px;
+  height:24px;
+  display: inline-block;
+}
+
+.nav_notif{
+  background: url('../../../assets/notif.png') no-repeat center;
+  width: 30px;
+  height:45px;
+  display: inline-block;
+}
+.nav_login{
+  background: url('../../../assets/login.png') no-repeat center;
+  width: 88px;
+  height: 54px;
+  display: inline-block;
+}
+
+.nav-email{
+  background: url('../../../assets/messages.png') no-repeat center;
+  width: 34px;
+  height:24px;
+  display: inline-block;
 }

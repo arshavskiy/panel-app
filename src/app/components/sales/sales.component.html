@@ -13,9 +13,9 @@
     </div>
   </div>
 
-  <div class="flex-between">
+  <div class="flex-space">
     <div style="display: block">
-      <canvas baseChart height="450px"
+      <canvas baseChart max-height="450px" height="270%" id="sale-pie"
               [data]="doughnutChartData"
               [chartType]="doughnutChartType"
               (chartHover)="chartHovered($event)"
