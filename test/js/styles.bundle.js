@@ -62,7 +62,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n.active nav {\r\n  position: absolute;\r\n  right: -260px  !important;;\r\n}\r\n.active app-nav-bar{\r\n  left:  0 !important;\r\n}\r\n.active main{\r\n  margin-left: 0 !important;\r\n}\r\n", ""]);
 
 // exports
 
