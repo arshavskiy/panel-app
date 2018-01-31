@@ -10,6 +10,10 @@
   color: #8492af;
 }
 
+.calendar{
+  margin-right:15px;
+}
+
 .title h3{
   font-weight: bold;
 }
