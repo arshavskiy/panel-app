@@ -36,6 +36,7 @@
   height: 33px;
   display: inline-block;
   margin: 0 20px;
+  cursor: pointer;
 }
 
 .clock_pink{
@@ -52,7 +53,7 @@
   font-weight: bold;
   color: rgb(14, 26, 53);
   line-height: 1.8em;
-  max-width: 150px;
+  max-width: 170px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -67,7 +68,7 @@
   position: relative;
   top: -4px;
   margin-left: 5px;
-  max-width: 150px;
+  max-width: 170px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

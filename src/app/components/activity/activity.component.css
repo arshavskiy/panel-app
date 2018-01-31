@@ -90,6 +90,7 @@
   font-weight: bold;
   color: rgb(14, 26, 53);
   line-height: 1.8em;
+  max-width: 170px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
