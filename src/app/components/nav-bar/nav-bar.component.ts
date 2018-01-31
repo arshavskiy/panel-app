@@ -14,6 +14,7 @@ export class NavBarComponent implements  OnInit{
   }
 
   toggle() {
+    console.log(event);
     if (document.body.classList.length > 0) {
       document.body.classList.remove('active');
 
