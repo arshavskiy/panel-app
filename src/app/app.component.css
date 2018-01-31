@@ -12,17 +12,12 @@ nav {
   color: white;
   width: 260px;
 }
-.active nav {
-  position: absolute;
-  right: -260px;
-}
-
 
 main {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  top: 80px;
+  top: 100px;
   margin-left: 260px;
   background: #f6f7fa;
   transition: all 0.2s ease-in-out;
@@ -35,7 +30,7 @@ app-nav-bar {
   top: 0;
   right: 0;
   left: 260px;
-  height: 80px;
+  height: 100px;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -44,15 +39,6 @@ app-nav-bar {
   z-index: 1000;
   transition: all 0.2s ease-in-out;
 }
-
-.active app-nav-bar{
-  left: 0;
-}
-
-
-
-
-
 
 .graph-holder{
   width: 100%;
@@ -78,7 +64,6 @@ div[app-graph]{
 div[app-tasks],div[app-messages], div[app-activity] {
   border:1px solid rgba(132, 146, 175, 0.3);
   background: #fff;
-
 }
 
 .m-10{

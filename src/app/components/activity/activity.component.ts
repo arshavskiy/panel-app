@@ -18,6 +18,7 @@ export class ActivityComponent implements OnInit {
       .getMsg().subscribe((res)=>{
       const data = res;
       this.messages = data;
+      console.log(this.messages);
     });
   }
 

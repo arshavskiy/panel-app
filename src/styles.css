@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.active nav {
+  position: absolute;
+  right: -260px  !important;;
+}
+
+.active app-nav-bar{
+  left:  0 !important;
+}
+
+.active main{
+  margin-left: 0 !important;
+}

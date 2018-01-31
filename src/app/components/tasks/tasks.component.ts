@@ -21,6 +21,7 @@ export class TasksComponent implements OnInit {
       .getTasks().subscribe((res) => {
       const data = res;
       this.tasks = data;
+      console.log(this.tasks);
       // this.tasks.len = this.tasks.length;
     });
 
