@@ -48,8 +48,16 @@
   }
 }
 
+@media (max-width: 586px) {
+  #sale-pie {
+    max-height: 400px !important;
+    height: 250% !important;
+    width: 130px !important;
+  }
+}
 
-.cart{
+
+cart{
   position: relative;
   right: 40px;
   text-overflow: ellipsis;
