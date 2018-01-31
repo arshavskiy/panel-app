@@ -1,16 +1,26 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  styleUrls: ['./nav-bar.component.css'],
 })
-export class NavBarComponent implements  OnInit{
+
+export class NavBarComponent implements OnInit {
+
+  @HostListener('window:resize') navHide() {
+    if (document.documentElement.clientWidth < 1200) {
+      document.body.classList.add('active');
+    } else {
+      document.body.classList.remove('active');
+    }
+  }
 
   constructor() {
   }
 
   ngOnInit() {
+    this.navHide();
   }
 
   toggle() {

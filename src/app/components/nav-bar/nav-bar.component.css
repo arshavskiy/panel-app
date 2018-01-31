@@ -100,3 +100,22 @@ section{
   height:24px;
   display: inline-block;
 }
+
+.plus{
+  background: url('../../../assets/plus.png') no-repeat center;
+  width: 12px;
+  height:12px;
+  display: inline-block;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.not-num{
+  position: relative;
+  right: -17px;
+  top: 4px;
+  color: #fff;
+  font-size: 10px;
+}

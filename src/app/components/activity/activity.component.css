@@ -90,6 +90,9 @@
   font-weight: bold;
   color: rgb(14, 26, 53);
   line-height: 1.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .msg_info_stitle{
@@ -100,6 +103,9 @@
   margin-left: 5px;
   top:-4px;
   color: rgb(132, 146, 175);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .msg_info_time{
