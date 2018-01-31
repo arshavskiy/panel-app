@@ -44,7 +44,8 @@
   border-left: 10px solid transparent;
   cursor: pointer;
 }
-.box:hover{
+.box:hover,
+.box.active{
    background: #122143;
    border-left: 10px solid #5584ff;
 }
