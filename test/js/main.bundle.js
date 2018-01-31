@@ -25,7 +25,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\n* {\r\n  font-family: Roboto, sans-serif;\r\n  font-size: 0.9em;\r\n}\r\n\r\nnav {\r\n  position: fixed;\r\n  height: 100%;\r\n  background: #0e1a35;\r\n  color: white;\r\n  width: 260px;\r\n}\r\n\r\nmain {\r\n  position: relative;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n  top: 100px;\r\n  margin-left: 260px;\r\n  background: #f6f7fa;\r\n  -webkit-transition: all 0.2s ease-in-out;\r\n  transition: all 0.2s ease-in-out;\r\n  padding: 15px;\r\n}\r\n\r\napp-nav-bar {\r\n  position: fixed;\r\n  top: 0;\r\n  right: 0;\r\n  left: 260px;\r\n  height: 100px;\r\n  background-color: #fff;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\r\n  padding: 0 20px;\r\n  z-index: 1000;\r\n  -webkit-transition: all 0.2s ease-in-out;\r\n  transition: all 0.2s ease-in-out;\r\n}\r\n\r\n.graph-holder{\r\n  width: 100%;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\r\n}\r\n\r\ndiv[app-sales]{\r\n  width: 40%;\r\n  height: auto;\r\n  border:1px solid rgba(132, 146, 175, 0.3);\r\n  background-color: rgb(255, 255, 255);\r\n}\r\n\r\ndiv[app-graph]{\r\n  width: 50%;\r\n  height: auto;\r\n  border:1px solid rgba(132, 146, 175, 0.3);\r\n  background-color: rgb(255, 255, 255);\r\n\r\n}\r\n\r\ndiv[app-tasks],div[app-messages], div[app-activity] {\r\n  border:1px solid rgba(132, 146, 175, 0.3);\r\n  background: #fff;\r\n}\r\n\r\n.m-10{\r\n  margin: 10px;\r\n  padding:0;\r\n}\r\n", ""]);
+exports.push([module.i, "@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\n* {\r\n  font-family: Roboto, sans-serif;\r\n  font-size: 0.9em;\r\n}\r\n\r\nnav {\r\n  position: fixed;\r\n  height: 100%;\r\n  background: #0e1a35;\r\n  color: white;\r\n  width: 260px;\r\n}\r\n\r\nmain {\r\n  position: relative;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n  top: 100px;\r\n  margin-left: 260px;\r\n  background: #f6f7fa;\r\n  -webkit-transition: all 0.2s ease-in-out;\r\n  transition: all 0.2s ease-in-out;\r\n  padding: 15px;\r\n}\r\n\r\napp-nav-bar {\r\n  position: fixed;\r\n  top: 0;\r\n  right: 0;\r\n  left: 260px;\r\n  height: 100px;\r\n  background-color: #fff;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\r\n  padding: 0 20px;\r\n  z-index: 1000;\r\n  -webkit-transition: all 0.2s ease-in-out;\r\n  transition: all 0.2s ease-in-out;\r\n}\r\n\r\n.graph-holder{\r\n  width: 100%;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\r\n  -ms-flex-wrap: inherit;\r\n      flex-wrap: inherit;\r\n}\r\n\r\ndiv[app-sales]{\r\n  width: 40%;\r\n  height: auto;\r\n  border:1px solid rgba(132, 146, 175, 0.3);\r\n  background-color: rgb(255, 255, 255);\r\n}\r\n\r\ndiv[app-graph]{\r\n  width: 50%;\r\n  height: auto;\r\n  border:1px solid rgba(132, 146, 175, 0.3);\r\n  background-color: rgb(255, 255, 255);\r\n\r\n}\r\n\r\ndiv[app-tasks],div[app-messages], div[app-activity] {\r\n  border:1px solid rgba(132, 146, 175, 0.3);\r\n  background: #fff;\r\n}\r\n\r\n.m-10{\r\n  margin: 10px;\r\n  padding:0;\r\n}\r\n", ""]);
 
 // exports
 
@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav app-main-nav></nav>\r\n\r\n<app-nav-bar></app-nav-bar>\r\n\r\n<main>\r\n\r\n  <div class=\"graph-holder\">\r\n        <div app-sales class=\"m-10 col-sm-12 col-md-5\"></div>\r\n        <div app-graph class=\"m-10 col\" ></div>\r\n  </div>\r\n  <div app-tasks class=\"m-10 col\"></div>\r\n  <div app-messages class=\"m-10 col\"></div>\r\n  <div app-activity class=\"m-10 col\"></div>\r\n\r\n</main>\r\n\r\n"
+module.exports = "<nav app-main-nav></nav>\r\n\r\n<app-nav-bar></app-nav-bar>\r\n\r\n<main>\r\n\r\n  <div class=\"graph-holder\">\r\n    <div app-sales class=\"m-10 col-md-12 col-lg-5\"></div>\r\n    <div app-graph class=\"m-10 col\"></div>\r\n  </div>\r\n    <div app-tasks class=\"m-10 col\"></div>\r\n    <div app-messages class=\"m-10 col\"></div>\r\n    <div app-activity class=\"m-10 col\"></div>\r\n</main>\r\n\r\n"
 
 /***/ }),
 
@@ -492,9 +492,6 @@ var NavBarComponent = (function () {
     NavBarComponent.prototype.navHide = function () {
         if (document.documentElement.clientWidth < 1200) {
             document.body.classList.add('active');
-        }
-        else {
-            document.body.classList.remove('active');
         }
     };
     NavBarComponent.prototype.ngOnInit = function () {

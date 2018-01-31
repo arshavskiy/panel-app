@@ -9,10 +9,8 @@ import {Component, OnInit, HostListener} from '@angular/core';
 export class NavBarComponent implements OnInit {
 
   @HostListener('window:resize') navHide() {
-    if (document.documentElement.clientWidth < 1200) {
+    if (document.documentElement.clientWidth < 1200 ) {
       document.body.classList.add('active');
-    } else {
-      document.body.classList.remove('active');
     }
   }
 
@@ -25,7 +23,7 @@ export class NavBarComponent implements OnInit {
 
   toggle() {
     console.log(event);
-    if (document.body.classList.length > 0) {
+    if (document.body.classList.length > 0 ) {
       document.body.classList.remove('active');
 
     } else {
