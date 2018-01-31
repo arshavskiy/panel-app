@@ -27,11 +27,27 @@
   padding-top: 40px;
 }
 
+@media (max-width: 1200px){
+  .flex-space{
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+}
+
 .flex-between-column{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
+
+@media (max-width: 1200px){
+  .flex-between-column{
+    margin-right: 20px;
+  }
+}
+
 
 .cart{
   position: relative;
@@ -59,7 +75,9 @@
   /*position: relative;*/
   /*right:50px;*/
 /*}*/
-
+.calendar{
+  margin-right:10px;
+}
 .elips{
   display: flex;
   justify-content: space-between;
