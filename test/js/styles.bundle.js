@@ -62,7 +62,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n.active nav {\r\n  position: absolute;\r\n  right: -260px  !important;;\r\n}\r\n.active app-nav-bar{\r\n  left:  0 !important;\r\n}\r\n.active main{\r\n  margin-left: 0 !important;\r\n}\r\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n.active nav {\r\n  position: absolute;\r\n  right: -260px  !important;;\r\n}\r\n.active app-nav-bar{\r\n  left:  0 !important;\r\n}\r\n.active main{\r\n  margin-left: 0 !important;\r\n}\r\n.active app-nav-bar .elips{\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-pack: distribute;\r\n      justify-content: space-around;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  border: 1px solid #5584ff;\r\n  border-radius: 20px;\r\n  padding: 9px;\r\n  width: 40px;\r\n  height:40px;\r\n  cursor: pointer;\r\n  color: white;\r\n  background: #5584ff;\r\n}\r\n.active app-nav-bar .elips:after{\r\n  content: '+';\r\n  color: white;\r\n  position: absolute;\r\n  font-size: 32px;\r\n}\r\n.active app-nav-bar .flex-space{\r\n  -webkit-box-pack: end;\r\n      -ms-flex-pack: end;\r\n          justify-content: flex-end;\r\n}\r\n.active app-nav-bar .elips b{\r\n  visibility: hidden;\r\n}\r\n", ""]);
 
 // exports
 
