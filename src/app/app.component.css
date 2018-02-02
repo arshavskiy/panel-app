@@ -74,11 +74,11 @@ div[app-tasks],div[app-messages], div[app-activity] {
 }
 
 .m-10{
-  margin: 10px;
+  margin: 5px;
   padding:0;
 }
 
-@media (max-width: 586px){
+@media (max-width: 1000px){
   .m-10{
     margin: 0;
     padding:0;

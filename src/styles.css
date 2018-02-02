@@ -11,3 +11,31 @@
 .active main{
   margin-left: 0 !important;
 }
+
+
+.active app-nav-bar .elips{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #5584ff;
+  border-radius: 20px;
+  padding: 9px;
+  width: 40px;
+  height:40px;
+  cursor: pointer;
+  color: white;
+  background: #5584ff;
+}
+.active app-nav-bar .elips:after{
+  content: '+';
+  color: white;
+  position: absolute;
+  font-size: 32px;
+}
+.active app-nav-bar .flex-space{
+  justify-content: flex-end;
+}
+
+.active app-nav-bar .elips b{
+  visibility: hidden;
+}

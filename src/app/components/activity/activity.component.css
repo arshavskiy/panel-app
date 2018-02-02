@@ -55,7 +55,7 @@
   width: 40px;
   height: 33px;
   display: inline-block;
-  margin: 0 30px;
+  margin-right:30px;
 }
 
 .arrow-l{
@@ -131,13 +131,14 @@ h6{
   font-weight:bold;
   color: #fff;
   font-size:1.4em;
-  margin:0 5px
 }
 
 .roundNumber-big{
+  width: 50px;
+  height: 50px;
   font-size:1.6em;
-
 }
+
 
 .blue{
   background: #5384ff;
