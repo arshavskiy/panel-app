@@ -21,15 +21,19 @@
   border:1px solid rgba(132, 146, 175, 0.1);
 }
 
-.tasks span{
-}
-
 .task_info_holder{
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   margin-left:20px;
 }
+
+@media (max-width: 576px) {
+  .task_info_holder {
+    flex-grow: 1;
+  }
+}
+
 .dots-menu{
   background: url('../../../assets/Options.png') no-repeat center;
   width: 40px;

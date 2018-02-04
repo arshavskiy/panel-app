@@ -40,9 +40,17 @@ app-nav-bar {
   transition: all 0.2s ease-in-out;
 }
 
-@media (max-width: 586px){
+@media (max-width: 576px){
   app-nav-bar{
     padding:0;
+  }
+
+  nav{
+    width: 80px;
+  }
+
+  main{
+    margin-left: 100px;
   }
 }
 

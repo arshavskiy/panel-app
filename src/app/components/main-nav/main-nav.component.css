@@ -1,4 +1,3 @@
-
 .logo {
   background: url('../../../assets/logo.png') no-repeat center;
   width: 181px;
@@ -13,30 +12,35 @@
   height: 21px;
   display: inline-block;
 }
+
 .user_icon {
   background: url('../../../assets/user.png') no-repeat center;
   width: 24px;
   height: 21px;
   display: inline-block;
 }
+
 .calendar_icon {
   background: url('../../../assets/calendar.png') no-repeat center;
   width: 24px;
   height: 21px;
   display: inline-block;
 }
+
 .workflow_icon {
   background: url('../../../assets/workflow.png') no-repeat center;
   width: 24px;
   height: 21px;
   display: inline-block;
 }
+
 .stats_icon {
   background: url('../../../assets/stats.png') no-repeat center;
   width: 24px;
   height: 21px;
   display: inline-block;
 }
+
 .box {
   height: 100px;
   display: flex;
@@ -44,12 +48,14 @@
   border-left: 10px solid transparent;
   cursor: pointer;
 }
+
 .box:hover,
-.box.active{
-   background: #122143;
-   border-left: 10px solid #5584ff;
+.box.active {
+  background: #122143;
+  border-left: 10px solid #5584ff;
 }
-.box .holder:first-child{
+
+.box .holder:first-child {
   margin-left: 40px;
 }
 
@@ -57,7 +63,23 @@
   margin-left: 20px;
   height: 21px;
 }
+
 .box span {
   font-size: 1.4em;
   line-height: 1em;
+}
+
+@media (max-width:576px) {
+  .xl-none {
+    visibility: hidden;
+  }
+  .box {
+    height: 60px;
+  }
+  .box .holder:first-child {
+    margin-left: 20px;
+  }
+  .logo {
+    margin-left: 20px;
+  }
 }

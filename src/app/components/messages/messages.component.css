@@ -1,47 +1,49 @@
-.flex-between{
+.flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.info_bar{
-  height:90px;
-  padding-left:15px;
-  padding-right:15px;
+.info_bar {
+  height: 90px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.header{
+.header {
   font-size: 24px;
   font-weight: bold;
 }
 
-.info_holder{
-  height:110px;
-  padding-left:15px;
-  border:1px solid rgba(132, 146, 175, 0.1);
+.info_holder {
+  height: 110px;
+  padding-left: 15px;
+  border: 1px solid rgba(132, 146, 175, 0.1);
 }
 
-.msgs span{
-}
-
-.msg_info_holder{
+.msg_info_holder {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin-left:20px;
+  margin-left: 20px;
 }
 
-@media (max-width: 1400px){
-  .task_info_menu{
-    margin:0;
+@media (max-width: 576px) {
+  .msg_info_holder {
+    flex-grow: 1;
   }
-  .msg_info_holder{
-    margin:0;
-  }
-
 }
 
-.dots-menu{
+@media (max-width: 1400px) {
+  .task_info_menu {
+    margin: 0;
+  }
+  .msg_info_holder {
+    margin: 0;
+  }
+}
+
+.dots-menu {
   background: url('../../../assets/Options.png') no-repeat center;
   width: 40px;
   height: 33px;
@@ -50,14 +52,15 @@
   cursor: pointer;
 }
 
-.msg-logo{
+.msg-logo {
   background: url('../../../assets/Image.png') no-repeat center;
   width: 40px;
   height: 33px;
   display: inline-block;
-  margin-right:30px;
+  margin-right: 30px;
 }
-.arrow-l{
+
+.arrow-l {
   background: url('../../../assets/arrow-l.png') no-repeat center;
   width: 18px;
   height: 14px;
@@ -66,13 +69,12 @@
   cursor: pointer;
 }
 
-.gear{
+.gear {
   background: url('../../../assets/gear.png') no-repeat center;
   width: 16px;
   height: 16px;
   display: inline-block;
   cursor: pointer;
-
 }
 
 .msg_info_title {
@@ -88,7 +90,7 @@
   text-overflow: ellipsis;
 }
 
-.msg_info_stitle{
+.msg_info_stitle {
   font-size: 1em;
   font-family: "Roboto";
   line-height: 1.8em;
@@ -98,7 +100,7 @@
   text-overflow: ellipsis;
 }
 
-.msg_info_time{
+.msg_info_time {
   font-size: 1.1em;
   text-transform: capitalize;
   font-family: "Roboto";
@@ -106,11 +108,12 @@
   line-height: 1.8em;
 }
 
-h6{
+h6 {
   font-weight: bold;
 }
 
-.roundNumber, .roundNumber-big{
+.roundNumber,
+.roundNumber-big {
   border-radius: 50%;
   width: 45px;
   height: 45px;
@@ -119,22 +122,21 @@ h6{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight:bold;
+  font-weight: bold;
   color: #fff;
-  font-size:1.4em;
-
+  font-size: 1.4em;
 }
 
-.roundNumber-big{
+.roundNumber-big {
   width: 50px;
   height: 50px;
-  font-size:1.6em;
+  font-size: 1.6em;
 }
 
-.blue{
+.blue {
   background: #5384ff;
 }
 
-.pink{
+.pink {
   background: #f83c7b;
 }
