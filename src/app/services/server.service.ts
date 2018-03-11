@@ -9,11 +9,11 @@ export class ServerService {
   constructor(private http: HttpClient ) { }
 
   getTasks() {
-    let url = `${this.apiRoot}/todos`;
+    const url = `${this.apiRoot}/todos`;
     return this.http.get(url);
   }
-  getMsg(){
-    let url = `${this.apiRoot}/users`;
+  getMsg() {
+    const url = `${this.apiRoot}/users`;
     return this.http.get(url);
 
   }
