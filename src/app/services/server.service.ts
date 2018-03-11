@@ -20,7 +20,7 @@ export class ServerService {
 
   }
   getTwit(q) {
-    const url = `${this.apiTwitUrl}/q`;
+    const url = `${this.apiTwitUrl}/${q}`;
     return this.http.get(url);
   }
 
