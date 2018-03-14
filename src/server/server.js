@@ -1,54 +1,117 @@
-let express = require('express');
-let app = express();
-let router = express.Router();
-const Twit = require('twit');
-const fs = require('fs');
+// call the packages we need
+let express = require('express');        // call express
+let app = express();                 // define our app using express
+let bodyParser = require('body-parser');
 
-let PORT = process.env.PORT || 3100;
-
-app.listen(PORT, function () {
-  console.log('Working on port ' + PORT);
-});
-
-app.get('/', function (req, res) {
-  res.send('hello world');
-  res.send( getMePosts('israel') );
-});
+var Twitter = require('twitter');
+let Twit = require('twit');
+let fs = require('fs');
 
 const config = {
   consumer_key: 'ZNUDph6kxp4gXNztuwlxM9hjt',
   consumer_secret: 'TxZvvq23mQyIPeKXoZjUbMIUwqyXSfhOghmF4zbelrAMxjwuGS',
   access_token: '2574428706-5bwdKynS3zxPfz2aOZ4GuO6edDHvmR48inRSYtX',
   access_token_secret: 'VkVsXyTnbC43DKQjmMBG5FDkr3dcWhC3DEh4qGtgVhEg2',
-  timeout_ms: 60 * 1000, // optional HTTP request timeout to apply to all requests.
+  timeout_ms: 1 * 1000, // optional HTTP request timeout to apply to all requests.
 };
+let T = new Twit(config);
 
-app.post('/twit:q', function(req, res) {
-
-  res.status(200).send( getMePosts(req.params.q) );
-
+var client = new Twitter({
+  consumer_key: 'ZNUDph6kxp4gXNztuwlxM9hjt',
+  consumer_secret: 'TxZvvq23mQyIPeKXoZjUbMIUwqyXSfhOghmF4zbelrAMxjwuGS',
+  access_token: '2574428706-5bwdKynS3zxPfz2aOZ4GuO6edDHvmR48inRSYtX',
+  access_token_secret: 'VkVsXyTnbC43DKQjmMBG5FDkr3dcWhC3DEh4qGtgVhEg2'
 });
 
 
-let T = new Twit(config);
+function getMePosts(q, count) {
 
-function getMePosts(q) {
+  let dataPushed = [];
   let params = {
     q: q,
     t: 'since:2017-01-01',
-    count: 10
+    count: count
   }
-  T.get('search/tweets', params, gotData);
 
-  function gotData(err, data, response) {
+  T.get('search/tweets', params, (err, data, response) => {
     let tweets = data.statuses;
-
-    for (var i = 0, l =  tweets.length; i < l; i++) {
-      console.log('we found ' + i + ' result' + ' ' + tweets[i].text);
-      // fs.appendFile('./found/ufo.txt', tweets[i].user.name + ' \r: ' + tweets[i].text + '-- \r' + tweets[i].user.created_at + '\r\n', 'utf8', (err) => {
-      //   if (err) throw err;
-      // });
+    for (let i = 0, l = tweets.length; i < l; i++) {
+      // console.log('we found ' + i + ' result' + ' ' + tweets[i].text);
+      dataPushed[i] = tweets[i].text;
+      fs.appendFile('./ufo.txt', tweets[i].user.name + ' \r: ' + tweets[i].text + '-- \r' + tweets[i].user.created_at + '\r\n', 'utf8', (err) => {
+        if (err) throw err;
+      });
     }
-    return tweets;
-  }
+    console.log(dataPushed[0] + '...');
+  });
+  return dataPushed;
 }
+
+
+// this will let us get the data from a POST
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+let port = process.env.PORT || 8080;
+
+// ROUTES FOR OUR API
+var router = express.Router();
+
+router.get('/', function (req, res) {
+  res.json({message: 'hooray! welcome to our api!'});
+});
+
+app.use('/api', router);
+
+
+router.route('/twits/:q,:count')
+  .get(function (req, res) {
+    let q = req.body.name;
+    getMePosts(req.params.q, req.params.count)
+    res.send('got it?');
+  });
+
+let params = {
+  q: 'ufo',
+  t: 'since:2018-01-01',
+  count: 10
+}
+
+
+T.get('search/tweets', params, gotData);
+
+function gotData(err, data, res) {
+  let tweets = data.statuses;
+  let dataPushedArray = new Array();
+
+  for (let i = 0, l = tweets.length; i < l; i++) {
+
+    dataPushedArray[i] = {
+      name: tweets[i].user.name,
+      text: tweets[i].text,
+      url: tweets[i].user.profile_background_image_url,
+      date: tweets[i].user.created_at
+    };
+  }
+  // fs.appendFile('./ufo2.txt', tweets[i].user.name + ' \r: ' + tweets[i].text + '-- \r' + tweets[i].user.created_at + '\r\n', 'utf8', (err) => {
+  //   if (err) throw err;
+  // });
+  // fs.appendFile('./ufo.json', JSON.stringify({"name":tweets[i].user.name, "text":tweets[i].text, "date":tweets[i].user.created_at}, null, 2), (err) => {
+  //   if (err) throw err;
+  // });
+
+  fs.appendFile('./ufo_' + tweets[0].user.name + '_.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
+    if (err) throw err;
+    console.log('file done');
+  });
+
+  if (err) {
+    console.log(err)
+  }
+  return dataPushedArray;
+}
+
+// START THE SERVER
+app.listen(port);
+console.log('Magic happens on port ' + port);
+
