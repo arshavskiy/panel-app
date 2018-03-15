@@ -4,6 +4,9 @@
     <span class="roundNumber blue"> 5 </span>
   </span>
 </div>
+<input type="text" ngModel="passQ">
+<input type="text" ngModel="passT">
+<button (click)="scrapTwitter(passQ,passT)"></button>
 
 <div *ngFor="let m of messages; let i = index">
   <div *ngIf="i < 4" class=" ">

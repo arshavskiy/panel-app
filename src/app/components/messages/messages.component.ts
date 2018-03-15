@@ -10,6 +10,10 @@ export class MessagesComponent implements OnInit {
 
   title = 'Messages';
   messages: any;
+  twitterData: object;
+  passQ: string;
+  passT: number;
+
 
   constructor(private serverService: ServerService) { }
 
@@ -19,5 +23,11 @@ export class MessagesComponent implements OnInit {
       this.messages = data;
     });
   }
-
+  scrapTwitter(q, t) {
+    console.log(q, t);
+    this.serverService.getTwit(q,t).subscribe((res) => {
+      const data = res;
+      this.twitterData = data;
+    });
+  }
 }

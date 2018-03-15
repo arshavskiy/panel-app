@@ -29,7 +29,7 @@ function getMePosts(q, count) {
 
   function gotData(err, data, res) {
     let tweets = data.statuses;
-    let dataPushedArray = new Array();
+    var dataPushedArray = new Array();
 
     for (let i = 0, l = tweets.length; i < l; i++) {
 
