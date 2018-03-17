@@ -1,22 +1,13 @@
 // call the packages we need
-let express = require('express');        // call express
-let app = express();                 // define our app using express
-let bodyParser = require('body-parser');
+const express = require('express');        // call express
+const app = express();                 // define our app using express
+const bodyParser = require('body-parser');
+const Twit = require('twit');
 
-var Twitter = require('twitter');
-let Twit = require('twit');
-let fs = require('fs');
+const config = require('./config');
+const fs = require('fs');
 
-const config = {
-  consumer_key: 'ZNUDph6kxp4gXNztuwlxM9hjt',
-  consumer_secret: 'TxZvvq23mQyIPeKXoZjUbMIUwqyXSfhOghmF4zbelrAMxjwuGS',
-  access_token: '2574428706-5bwdKynS3zxPfz2aOZ4GuO6edDHvmR48inRSYtX',
-  access_token_secret: 'VkVsXyTnbC43DKQjmMBG5FDkr3dcWhC3DEh4qGtgVhEg2',
-  timeout_ms: 1 * 1000, // optional HTTP request timeout to apply to all requests.
-};
 let T = new Twit(config);
-
-
 function getMePosts(q, count) {
 
   let params = {

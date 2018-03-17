@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import {FormsModule} from '@angular/forms'
 import {ServerService} from '../../services/server.service';
 
+export class Heroine {
+	id: number;
+	name: string;
+}
 @Component({
   selector: '[app-messages]',
   templateUrl: './messages.component.html',
@@ -14,6 +19,10 @@ export class MessagesComponent implements OnInit {
   passQ: string;
   passT: number;
 
+  heroine: Heroine = {
+		id: 1,
+		name: 'Tom'
+	};
 
   constructor(private serverService: ServerService) { }
 
@@ -25,7 +34,7 @@ export class MessagesComponent implements OnInit {
   }
   scrapTwitter(q, t) {
     console.log(q, t);
-    this.serverService.getTwit(q,t).subscribe((res) => {
+    this.serverService.getTwit(q, t).subscribe((res) => {
       const data = res;
       this.twitterData = data;
     });

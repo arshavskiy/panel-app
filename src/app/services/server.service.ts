@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ServerService {
 
   apiRoot: string = 'https://jsonplaceholder.typicode.com';
-  apiTwitUrl: string = 'http://localhost:8080/api/twits/';
+  apiTwitUrl: string = 'http://localhost:8080/api/twits';
   twitResponse: any = '';
 
   constructor(private http: HttpClient ) { }
@@ -19,9 +19,9 @@ export class ServerService {
     return this.http.get(url);
 
   }
-  getTwit(q,t) {
+  getTwit(q, t) {
     const url = `${this.apiTwitUrl}/${q},${t}`;
-    return this.http.get(url);
+    return this.http.get(url)
   }
 
 }

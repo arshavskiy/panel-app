@@ -9,6 +9,7 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { ActivityComponent } from './components/activity/activity.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { ServerService } from './services/server.service';
 import { ChartsModule } from 'ng2-charts';
 
@@ -26,7 +27,8 @@ import { ChartsModule } from 'ng2-charts';
   imports: [
     BrowserModule,
     HttpClientModule,
-    ChartsModule
+    ChartsModule,
+    FormsModule
 
   ],
   providers: [ServerService],
