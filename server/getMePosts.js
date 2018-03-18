@@ -34,6 +34,7 @@ module.exports =  (q, count) => {
     if (err) {
       console.log(err);
     }
+
     return dataPushedArray;
   }
   return T.get('search/tweets', params, gotData);

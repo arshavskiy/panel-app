@@ -31,7 +31,6 @@ router.route('/twits/:q,:count')
     let q = req.body.name;
     getMePosts(req.params.q, req.params.count);
     console.log('async?');
-    console.log(getMePosts);
 
     res.send('got it?' + getMePosts);
   });
