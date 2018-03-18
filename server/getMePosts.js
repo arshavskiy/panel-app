@@ -10,9 +10,7 @@ module.exports =  (q, count) => {
     q: q,
     t: 'since:2018-01-01',
     count: count
-  }
-
-
+  };
 
   function gotData(err, data, res) {
     let tweets = data.statuses;
@@ -27,13 +25,14 @@ module.exports =  (q, count) => {
         date: tweets[i].user.created_at
       };
     }
+
     fs.appendFile('./data/Scrapper-' + tweets[0].user.name + '_.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
       if (err) throw err;
       console.log('file done');
     });
 
     if (err) {
-      console.log(err)
+      console.log(err);
     }
     return dataPushedArray;
   }
