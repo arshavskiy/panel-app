@@ -4,8 +4,8 @@ const app = express(); // define our app using express
 const bodyParser = require('body-parser');
 
 
-const getMePosts = require('./getMePosts');
-
+const getMePostsModule = require('./getMePosts');
+const getMeFunc = getMePostsModule.getMeFunc;
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({
   extended: true
@@ -28,11 +28,12 @@ app.use('/api', router);
 
 router.route('/twits/:q,:count')
   .get(function (req, res) {
+
     let q = req.body.name;
-    getMePosts(req.params.q, req.params.count);
+    let twits = getMeFunc(req.params.q, req.params.count);
     console.log('async?');
 
-    res.send('got it?' + getMePosts);
+    res.send('got it?' + JSON.stringify(twits));
   });
 
 

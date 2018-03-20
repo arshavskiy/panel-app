@@ -4,7 +4,7 @@ const fs = require('fs');
 
 let T = new Twit(config);
 
-module.exports =  (q, count) => {
+function getMeFunc(q, count) {
 
   let params = {
     q: q,
@@ -21,12 +21,11 @@ module.exports =  (q, count) => {
       dataPushedArray[i] = {
         name: tweets[i].user.name,
         text: tweets[i].text,
-        url: tweets[i].user.profile_background_image_url,
         date: tweets[i].user.created_at
       };
     }
 
-    fs.appendFile('./data/Scrapper-' + tweets[0].user.name + '_.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
+    fs.appendFile('./data/twits-' + tweets[0].user.name + '_.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
       if (err) throw err;
       console.log('file done');
     });
@@ -38,4 +37,8 @@ module.exports =  (q, count) => {
     return dataPushedArray;
   }
   return T.get('search/tweets', params, gotData);
+}
+
+module.exports =  {
+  getMeFunc: getMeFunc
 }
