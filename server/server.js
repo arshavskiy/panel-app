@@ -2,10 +2,16 @@
 const express = require('express'); // call express
 const app = express(); // define our app using express
 const bodyParser = require('body-parser');
+const fs = require('fs');
+var Promise = require("bluebird");
 
 
 const getMePostsModule = require('./getMePosts');
 const getMeFunc = getMePostsModule.getMeFunc;
+
+// const rf = require ('./rf.js');
+
+
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({
   extended: true
@@ -31,9 +37,17 @@ router.route('/twits/:q,:count')
 
     let q = req.body.name;
     let twits = getMeFunc(req.params.q, req.params.count);
-    console.log('async?');
 
-    res.send('got it?' + JSON.stringify(twits));
+    fs.readFile('./data/data.json', 'utf8', function (err, data) {
+      if (err) throw err;
+      obj = data;
+      console.log('data read..');
+    });
+
+    // const readTwitter = rf.readMyData();
+    // const dataFromTwitter = rf.obj;
+    res.send('got it?' + obj);
+
   });
 
 

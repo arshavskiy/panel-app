@@ -25,20 +25,28 @@ function getMeFunc(q, count) {
       };
     }
 
-    fs.appendFile('./data/twits-' + tweets[0].user.name + '_.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
+    fs.appendFile('./data/search-' + tweets[0].user.name + '_.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
       if (err) throw err;
-      console.log('file done');
+      console.log('search file done');
+    });
+
+    fs.appendFile('./data/data.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
+      if (err) throw err;
+      console.log('file data done');
     });
 
     if (err) {
       console.log(err);
     }
 
-    return dataPushedArray;
+    return;
   }
-  return T.get('search/tweets', params, gotData);
+
+  T.get('search/tweets', params, gotData);
+
+  return;
 }
 
 module.exports =  {
   getMeFunc: getMeFunc
-}
+};
