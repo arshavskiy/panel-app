@@ -42,11 +42,13 @@ router.route('/twits/:q,:count')
       if (err) throw err;
       obj = data;
       console.log('data read..');
+      let parse = JSON.parse(obj);
+      res.send(parse);
     });
 
     // const readTwitter = rf.readMyData();
     // const dataFromTwitter = rf.obj;
-    res.send('got it?' + obj);
+    // res.send('got it?' + rf.obj);
 
   });
 
