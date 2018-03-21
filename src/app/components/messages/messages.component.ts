@@ -34,11 +34,18 @@ export class MessagesComponent implements OnInit {
       this.messages = data;
     });
   }
+
   scrapTwitter(q, t) {
     console.log(q, t);
     this.serverService.getTwit(q, t).subscribe((res) => {
       const data = res;
       this.twitterData = data;
     });
+
+    // let x = document.getElementsByClassName("search_result");
+    // let i = 0, l=0;
+    // for (i = 0; l = x.length; i < l; i++) {
+    //   x[i].innerHTML;
+    // }
   }
 }
