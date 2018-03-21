@@ -11,7 +11,18 @@ const getMeFunc = getMePostsModule.getMeFunc;
 
 // const rf = require ('./rf.js');
 
+app.use(function (req, res, next) {
 
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+  // Request methods you wish to allow
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  // Set to true if you need the website to include cookies in the requests sent
+  // to the API (e.g. in case you use sessions)
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  // Pass to next layer of middleware
+  next();
+});
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({
   extended: true
@@ -38,18 +49,11 @@ router.route('/twits/:q,:count')
     let q = req.body.name;
     let twits = getMeFunc(req.params.q, req.params.count);
 
-    fs.readFile('./data/data.json', 'utf8', function (err, data) {
+    let x = fs.readFile('./data/data.json', 'utf8', function (err, data) {
       if (err) throw err;
-      obj = data;
       console.log('data read..');
-      let parse = JSON.parse(obj);
-      res.send(parse);
+      res.send(JSON.parse(data));
     });
-
-    // const readTwitter = rf.readMyData();
-    // const dataFromTwitter = rf.obj;
-    // res.send('got it?' + rf.obj);
-
   });
 
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 import {ServerService} from '../../services/server.service';
+import { NgStyle } from '@angular/common';
 
 export class Heroine {
 	id: number;
@@ -13,11 +14,12 @@ export class Heroine {
 })
 export class MessagesComponent implements OnInit {
 
-  title = 'Messages';
+  title = 'Twitter search';
   messages: any;
   twitterData: object;
   passQ: string;
   passT: number;
+  Tlength :number;
 
   heroine: Heroine = {
 		id: 1,

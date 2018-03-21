@@ -1,34 +1,32 @@
-<div class="flex-between info_bar">
+<div class="flex-center info_bar">
   <span class="header">{{title}}</span>
-  <span style="display: flex;">
+  <!-- <span style="display: flex;">
     <span class="roundNumber blue"> 5 </span>
-  </span>
+  </span> -->
 </div>
-
-<input [(ngModel)]="passQ" placeholder="">
-<input [(ngModel)]="passT" placeholder="">
-<button (click)="scrapTwitter(passQ, passT)">Search on Twitter</button>
-
-<div *ngFor="let m of messages; let i = index">
-  <div *ngIf="i < 4" class=" ">
+<section class="search_bar">
+<input class="main" [(ngModel)]="passQ" placeholder="search..">
+<input class="number" [(ngModel)]="passT" placeholder="number..">
+<button class="btn_search" (click)="scrapTwitter(passQ, passT)">Search on Twitter</button>
+</section>
+<!-- <div *ngFor="let m of messages; let i = index"> -->
+<div *ngFor="let m of twitterData; let i = index">
 
     <div class="flex-between info_holder">
       <i class="msg-logo roundNumber-big">
+          <img [src]="m.url">
+
       </i>
       <div class="msg_info_holder">
         <div>
+
           <span class="msg_info_title"> {{m.name}} </span>
-          <span class="msg_info_time"> 2 days ego </span>
-        </div>
-        <span class="msg_info_stitle"> {{m.company.catchPhrase}} </span>
-        <div>
-          <i class="arrow-l"></i>
-          <i class="gear"></i>
+          <span class="msg_info_time"> {{m.date}} </span>
+          <div> {{m.text}} </div>
         </div>
       </div>
       <div class="msg_info_menu">
-        <i class="dots-menu"></i>
+          <h2 style="color:#181818; padding-right:10px;">{{i+1}}</h2>
       </div>
     </div>
-  </div>
 </div>
