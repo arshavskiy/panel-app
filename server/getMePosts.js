@@ -7,44 +7,47 @@ let T = new Twit(config);
 function getMeFunc(q, count) {
 
   let params = {
-    q: q,
-    t: 'since:2018-01-01',
+    q: q + ' since:2017-01-01',
     count: count
   };
 
+  console.log(params);
+
   function gotData(err, data, res) {
-    let tweets = data.statuses;
-    var dataPushedArray = new Array();
+    if (!err) {
+      let tweets = data.statuses;
+      var dataPushedArray = new Array();
 
-    for (let i = 0, l = tweets.length; i < l; i++) {
+      for (let i = 0, l = tweets.length; i < l; i++) {
 
-      dataPushedArray[i] = {
-        name: tweets[i].user.name,
-        text: tweets[i].text,
-        date: tweets[i].user.created_at,
-        url:  tweets[i].user.profile_image_url_https,
-      };
+        dataPushedArray[i] = {
+          name: tweets[i].user.name,
+          text: tweets[i].text,
+          date: tweets[i].user.created_at,
+          url: tweets[i].user.profile_image_url_https,
+        };
 
-    }
+      }
 
-    // fs.appendFileSync('./data/search-' + tweets[0].user.name + '_.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
-    //   if (err) throw err;
-    //   console.log('search file done');
-    // });
+      // fs.appendFileSync('./data/search-' + tweets[0].user.name + '_.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
+      //   if (err) throw err;
+      //   console.log('search file done');
+      // });
 
-    fs.writeFileSync('./data/data.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
-      if (err) throw err;
-      console.log('file data done');
-    });
+      fs.writeFileSync('./data/data.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
+        if (err) console.log(err);
+        console.log('file data done');
+      });
 
-    if (err) {
-      console.log(err);
+      if (err) {
+        console.log(err);
+      }
     }
   }
 
   T.get('search/tweets', params, gotData);
 }
 
-module.exports =  {
+module.exports = {
   getMeFunc: getMeFunc
 };
