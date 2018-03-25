@@ -4,7 +4,7 @@ const fs = require('fs');
 
 let T = new Twit(config);
 
-function getMeFunc(q, count) {
+function getMeFunc(q, count, callBackFn) {
 
   let params = {
     q: q,
@@ -13,6 +13,13 @@ function getMeFunc(q, count) {
   };
 
   function gotData(err, data, res) {
+    if(err){
+      if(callBackFn){
+        callBackFn(err);
+      }
+      return;
+    }
+    
     let tweets = data.statuses;
     var dataPushedArray = new Array();
 
@@ -26,19 +33,9 @@ function getMeFunc(q, count) {
       };
 
     }
-
-    // fs.appendFileSync('./data/search-' + tweets[0].user.name + '_.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
-    //   if (err) throw err;
-    //   console.log('search file done');
-    // });
-
-    fs.writeFileSync('./data/data.json', JSON.stringify(dataPushedArray, null, 2), (err) => {
-      if (err) throw err;
-      console.log('file data done');
-    });
-
-    if (err) {
-      console.log(err);
+    
+    if(callBackFn){
+       callBackFn(null, dataPushedArray);
     }
   }
 
