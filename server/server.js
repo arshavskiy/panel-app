@@ -47,13 +47,15 @@ router.route('/twits/:q,:count')
   .get(function (req, res) {
 
     let q = req.body.name;
-    getMeFunc(req.params.q, req.params.count);
 
-    let x = fs.readFile('./data/data.json', 'utf8', function (err, data) {
-      if (err) throw err;
       console.log('data read..');
       res.status('200').send(JSON.parse(data))
+
+      getMeFunc(req.params.q, req.params.count, function(err, tweets){
+      res.send(tweets);
+
     });
+
   });
 
 
