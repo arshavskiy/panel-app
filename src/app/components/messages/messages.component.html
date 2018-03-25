@@ -9,13 +9,14 @@
   <input class="number" [(ngModel)]="passT" placeholder="number..">
   <select type="number" [(ngModel)]="levelString">
     <option *ngFor="let level of levels" [ngValue]="level.val">{{level.name}}</option>
-    </select>
+   </select>
   <button class="btn_search" (click)="scrapTwitter(passQ + ' '+levelString, passT)">Search on Twitter</button>
 </section>
+
 <!-- <div *ngFor="let m of messages; let i = index"> -->
 <div *ngFor="let m of twitterData; let i = index">
 
-  <div class="flex-between info_holder" *ngIf="m.name">
+  <div class="flex-between info_holder">
     <i class="msg-logo roundNumber-big">
       <img *ngIf="m.url != null" [src]="m.url">
 
