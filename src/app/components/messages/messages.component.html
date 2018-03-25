@@ -5,28 +5,33 @@
   </span> -->
 </div>
 <section class="search_bar">
-<input class="main" [(ngModel)]="passQ" placeholder="search..">
-<input class="number" [(ngModel)]="passT" placeholder="number..">
-<button class="btn_search" (click)="scrapTwitter(passQ, passT)">Search on Twitter</button>
+  <input class="main" [(ngModel)]="passQ" placeholder="search..">
+  <input class="number" [(ngModel)]="passT" placeholder="number..">
+  <select type="number" [(ngModel)]="levelString">
+    <option *ngFor="let level of levels" [ngValue]="level.val">{{level.name}}</option>
+    </select>
+  <button class="btn_search" (click)="scrapTwitter(passQ + ' '+levelString, passT)">Search on Twitter</button>
 </section>
 <!-- <div *ngFor="let m of messages; let i = index"> -->
 <div *ngFor="let m of twitterData; let i = index">
 
-    <div class="flex-between info_holder">
-      <i class="msg-logo roundNumber-big">
-          <img [src]="m.url">
+  <div class="flex-between info_holder" *ngIf="m.name">
+    <i class="msg-logo roundNumber-big">
+      <img *ngIf="m.url != null" [src]="m.url">
 
-      </i>
-      <div class="msg_info_holder">
-        <div>
-
-          <span class="msg_info_title"> {{m.name}} </span>
-          <span class="msg_info_time"> {{m.date}} </span>
-          <div class="search_result"> {{m.text}} </div>
+    </i>
+    <div class="msg_info_holder">
+      <div>
+        <span class="msg_info_title"> {{m.name}} </span>
+        <span class="msg_info_time"> {{m.date}} </span>
+        <div class="search_result"> {{m.text}} </div>
+        <div class="image">
+          <img *ngIf="m.image != null" [src]="m.image" class="image_holder">
         </div>
       </div>
-      <div class="msg_info_menu">
-          <h2 style="color:#181818; padding-right:10px;">{{i+1}}</h2>
-      </div>
     </div>
+    <div class="msg_info_menu">
+      <h2 style="color:#181818; padding-right:10px;">{{i+1}}</h2>
+    </div>
+  </div>
 </div>

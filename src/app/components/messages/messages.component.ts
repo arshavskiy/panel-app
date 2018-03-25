@@ -21,10 +21,13 @@ export class MessagesComponent implements OnInit {
   passT: number;
   Tlength :number;
 
-  heroine: Heroine = {
-		id: 1,
-		name: 'Tom'
-	};
+  levelString: string;
+  levels:Array<Object> = [
+    {val: "",       name: ""},
+    {val: ' filter:media', name: "media"},
+    {val: ":)",       name: ":)"},
+    {val: "filter:images",       name: "images"}
+];
 
   constructor(private serverService: ServerService) { }
 
