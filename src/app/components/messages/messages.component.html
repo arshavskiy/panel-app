@@ -18,7 +18,7 @@
 
   <div class="flex-between info_holder">
     <i class="msg-logo roundNumber-big">
-      <img *ngIf="m.url != null" [src]="m.url">
+      <img *ngIf="m.url && m.url.length > 0" [src]="m.url">
 
     </i>
     <div class="msg_info_holder">
@@ -27,7 +27,7 @@
         <span class="msg_info_time"> {{m.date}} </span>
         <div class="search_result"> {{m.text}} </div>
         <div class="image">
-          <img *ngIf="m.image != null" [src]="m.image" class="image_holder">
+          <img *ngIf="m.image && m.image.length > 0" [src]="m.image" class="image_holder">
         </div>
       </div>
     </div>
