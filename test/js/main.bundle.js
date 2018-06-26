@@ -25,7 +25,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\n* {\r\n  font-family: Roboto, sans-serif;\r\n  font-size: 0.9em;\r\n}\r\n\r\nnav {\r\n  position: fixed;\r\n  height: 100%;\r\n  background: #0e1a35;\r\n  color: white;\r\n  width: 260px;\r\n}\r\n\r\nmain {\r\n  position: relative;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n  top: 100px;\r\n  margin-left: 260px;\r\n  background: #f6f7fa;\r\n  -webkit-transition: all 0.2s ease-in-out;\r\n  transition: all 0.2s ease-in-out;\r\n  padding: 15px;\r\n}\r\n\r\napp-nav-bar {\r\n  position: fixed;\r\n  top: 0;\r\n  right: 0;\r\n  left: 260px;\r\n  height: 100px;\r\n  background-color: #fff;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\r\n  padding: 0 20px;\r\n  z-index: 1000;\r\n  -webkit-transition: all 0.2s ease-in-out;\r\n  transition: all 0.2s ease-in-out;\r\n}\r\n\r\n@media (max-width: 576px){\r\n  app-nav-bar{\r\n    padding:0;\r\n  }\r\n\r\n  nav{\r\n    width: 80px;\r\n  }\r\n\r\n  main{\r\n    margin-left: 100px;\r\n  }\r\n}\r\n\r\n.graph-holder{\r\n  width: 100%;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\r\n  -ms-flex-wrap: inherit;\r\n      flex-wrap: inherit;\r\n}\r\n\r\ndiv[app-sales]{\r\n  width: 40%;\r\n  height: auto;\r\n  border:1px solid rgba(132, 146, 175, 0.3);\r\n  background-color: rgb(255, 255, 255);\r\n}\r\n\r\ndiv[app-graph]{\r\n  width: 50%;\r\n  height: auto;\r\n  border:1px solid rgba(132, 146, 175, 0.3);\r\n  background-color: rgb(255, 255, 255);\r\n\r\n}\r\n\r\ndiv[app-tasks],div[app-messages], div[app-activity] {\r\n  border:1px solid rgba(132, 146, 175, 0.3);\r\n  background: #fff;\r\n}\r\n\r\n.m-10{\r\n  margin: 5px;\r\n  padding:0;\r\n}\r\n\r\n@media (max-width: 1000px){\r\n  .m-10{\r\n    margin: 0;\r\n    padding:0;\r\n    margin-bottom: 5px;\r\n  }\r\n}\r\n", ""]);
+exports.push([module.i, "@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n* {\r\n  font-family: Roboto, sans-serif;\r\n  font-size: 0.9em;\r\n}\r\nnav {\r\n  position: fixed;\r\n  height: 100%;\r\n  background: #0e1a35;\r\n  color: white;\r\n  width: 260px;\r\n}\r\nmain {\r\n  position: relative;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n  top: 100px;\r\n  margin-left: 260px;\r\n  background: #f6f7fa;\r\n  -webkit-transition: all 0.2s ease-in-out;\r\n  transition: all 0.2s ease-in-out;\r\n  padding: 15px;\r\n}\r\napp-nav-bar {\r\n  position: fixed;\r\n  top: 0;\r\n  right: 0;\r\n  left: 260px;\r\n  height: 100px;\r\n  background-color: #fff;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\r\n  padding: 0 20px;\r\n  z-index: 1000;\r\n  -webkit-transition: all 0.2s ease-in-out;\r\n  transition: all 0.2s ease-in-out;\r\n}\r\n@media (max-width: 576px) {\r\n  app-nav-bar {\r\n    padding: 0;\r\n  }\r\n  nav {\r\n    width: 80px;\r\n  }\r\n  main {\r\n    margin-left: 100px;\r\n  }\r\n}\r\n.graph-holder {\r\n  width: 100%;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\r\n  -ms-flex-wrap: inherit;\r\n      flex-wrap: inherit;\r\n}\r\ndiv[app-sales] {\r\n  width: 40%;\r\n  height: auto;\r\n  border: 1px solid rgba(132, 146, 175, 0.3);\r\n  background-color: rgb(255, 255, 255);\r\n}\r\ndiv[app-graph] {\r\n  width: 50%;\r\n  height: auto;\r\n  border: 1px solid rgba(132, 146, 175, 0.3);\r\n  background-color: rgb(255, 255, 255);\r\n}\r\ndiv[app-tasks],\r\ndiv[app-messages],\r\ndiv[app-activity] {\r\n  border: 1px solid rgba(132, 146, 175, 0.3);\r\n  background: #fff;\r\n}\r\n.m-10 {\r\n  margin: 5px;\r\n  padding: 0;\r\n}\r\n.user {\r\n  font-size: 2.5rem;\r\n}\r\n@media (max-width: 1000px) {\r\n  .m-10 {\r\n    margin: 0;\r\n    padding: 0;\r\n    margin-bottom: 5px;\r\n  }\r\n}\r\n", ""]);
 
 // exports
 
@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav app-main-nav></nav>\r\n\r\n<app-nav-bar></app-nav-bar>\r\n\r\n<main>\r\n\r\n  <div class=\"graph-holder\">\r\n    <div app-sales class=\"m-10 col-12 col-lg-5\"></div>\r\n    <div app-graph class=\"m-10 col\"></div>\r\n  </div>\r\n    <div app-tasks class=\"m-10 col\"></div>\r\n    <div app-messages class=\"m-10 col\"></div>\r\n    <div app-activity class=\"m-10 col\"></div>\r\n</main>\r\n\r\n"
+module.exports = "<nav app-main-nav></nav>\r\n<app-nav-bar></app-nav-bar>\r\n<main>\r\n  <h1 class=\"user\">{{userName}}!</h1>\r\n  <div class=\"graph-holder\">\r\n    <div app-sales class=\"m-10 col-12 col-lg-5\"></div>\r\n    <div app-graph class=\"m-10 col\"></div>\r\n  </div>\r\n    <div app-tasks class=\"m-10 col\"></div>\r\n    <div app-messages class=\"m-10 col\"></div>\r\n    <div app-activity class=\"m-10 col\"></div>\r\n</main>\r\n\r\n"
 
 /***/ }),
 
@@ -57,7 +57,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'app';
+        this.userName = 'Hello Barak';
     }
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -794,6 +794,8 @@ var map = {
 	"./be.js": "../../../../moment/locale/be.js",
 	"./bg": "../../../../moment/locale/bg.js",
 	"./bg.js": "../../../../moment/locale/bg.js",
+	"./bm": "../../../../moment/locale/bm.js",
+	"./bm.js": "../../../../moment/locale/bm.js",
 	"./bn": "../../../../moment/locale/bn.js",
 	"./bn.js": "../../../../moment/locale/bn.js",
 	"./bo": "../../../../moment/locale/bo.js",
@@ -830,6 +832,8 @@ var map = {
 	"./en-gb.js": "../../../../moment/locale/en-gb.js",
 	"./en-ie": "../../../../moment/locale/en-ie.js",
 	"./en-ie.js": "../../../../moment/locale/en-ie.js",
+	"./en-il": "../../../../moment/locale/en-il.js",
+	"./en-il.js": "../../../../moment/locale/en-il.js",
 	"./en-nz": "../../../../moment/locale/en-nz.js",
 	"./en-nz.js": "../../../../moment/locale/en-nz.js",
 	"./eo": "../../../../moment/locale/eo.js",
@@ -837,6 +841,8 @@ var map = {
 	"./es": "../../../../moment/locale/es.js",
 	"./es-do": "../../../../moment/locale/es-do.js",
 	"./es-do.js": "../../../../moment/locale/es-do.js",
+	"./es-us": "../../../../moment/locale/es-us.js",
+	"./es-us.js": "../../../../moment/locale/es-us.js",
 	"./es.js": "../../../../moment/locale/es.js",
 	"./et": "../../../../moment/locale/et.js",
 	"./et.js": "../../../../moment/locale/et.js",
@@ -862,6 +868,8 @@ var map = {
 	"./gl.js": "../../../../moment/locale/gl.js",
 	"./gom-latn": "../../../../moment/locale/gom-latn.js",
 	"./gom-latn.js": "../../../../moment/locale/gom-latn.js",
+	"./gu": "../../../../moment/locale/gu.js",
+	"./gu.js": "../../../../moment/locale/gu.js",
 	"./he": "../../../../moment/locale/he.js",
 	"./he.js": "../../../../moment/locale/he.js",
 	"./hi": "../../../../moment/locale/hi.js",
@@ -910,12 +918,16 @@ var map = {
 	"./mk.js": "../../../../moment/locale/mk.js",
 	"./ml": "../../../../moment/locale/ml.js",
 	"./ml.js": "../../../../moment/locale/ml.js",
+	"./mn": "../../../../moment/locale/mn.js",
+	"./mn.js": "../../../../moment/locale/mn.js",
 	"./mr": "../../../../moment/locale/mr.js",
 	"./mr.js": "../../../../moment/locale/mr.js",
 	"./ms": "../../../../moment/locale/ms.js",
 	"./ms-my": "../../../../moment/locale/ms-my.js",
 	"./ms-my.js": "../../../../moment/locale/ms-my.js",
 	"./ms.js": "../../../../moment/locale/ms.js",
+	"./mt": "../../../../moment/locale/mt.js",
+	"./mt.js": "../../../../moment/locale/mt.js",
 	"./my": "../../../../moment/locale/my.js",
 	"./my.js": "../../../../moment/locale/my.js",
 	"./nb": "../../../../moment/locale/nb.js",
@@ -968,6 +980,8 @@ var map = {
 	"./te.js": "../../../../moment/locale/te.js",
 	"./tet": "../../../../moment/locale/tet.js",
 	"./tet.js": "../../../../moment/locale/tet.js",
+	"./tg": "../../../../moment/locale/tg.js",
+	"./tg.js": "../../../../moment/locale/tg.js",
 	"./th": "../../../../moment/locale/th.js",
 	"./th.js": "../../../../moment/locale/th.js",
 	"./tl-ph": "../../../../moment/locale/tl-ph.js",
@@ -982,6 +996,8 @@ var map = {
 	"./tzm-latn": "../../../../moment/locale/tzm-latn.js",
 	"./tzm-latn.js": "../../../../moment/locale/tzm-latn.js",
 	"./tzm.js": "../../../../moment/locale/tzm.js",
+	"./ug-cn": "../../../../moment/locale/ug-cn.js",
+	"./ug-cn.js": "../../../../moment/locale/ug-cn.js",
 	"./uk": "../../../../moment/locale/uk.js",
 	"./uk.js": "../../../../moment/locale/uk.js",
 	"./ur": "../../../../moment/locale/ur.js",

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
 * {
   font-family: Roboto, sans-serif;
   font-size: 0.9em;
@@ -24,7 +23,6 @@ main {
   padding: 15px;
 }
 
-
 app-nav-bar {
   position: fixed;
   top: 0;
@@ -40,60 +38,59 @@ app-nav-bar {
   transition: all 0.2s ease-in-out;
 }
 
-@media (max-width: 576px){
-  app-nav-bar{
-    padding:0;
+@media (max-width: 576px) {
+  app-nav-bar {
+    padding: 0;
   }
-
-  nav{
+  nav {
     width: 80px;
   }
-
-  main{
+  main {
     margin-left: 100px;
   }
 }
 
-.graph-holder{
+.graph-holder {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: inherit;
 }
 
-div[app-sales]{
+div[app-sales] {
   width: 40%;
   height: auto;
-  border:1px solid rgba(132, 146, 175, 0.3);
+  border: 1px solid rgba(132, 146, 175, 0.3);
   background-color: rgb(255, 255, 255);
 }
 
-div[app-graph]{
+div[app-graph] {
   width: 50%;
   height: auto;
-  border:1px solid rgba(132, 146, 175, 0.3);
+  border: 1px solid rgba(132, 146, 175, 0.3);
   background-color: rgb(255, 255, 255);
-
 }
 
-div[app-tasks],div[app-messages], div[app-activity] {
-  border:1px solid rgba(132, 146, 175, 0.3);
+div[app-tasks],
+div[app-messages],
+div[app-activity] {
+  border: 1px solid rgba(132, 146, 175, 0.3);
   background: #fff;
 }
 
-.m-10{
+.m-10 {
   margin: 5px;
-  padding:0;
+  padding: 0;
 }
 
 .user {
   font-size: 2.5rem;
 }
 
-@media (max-width: 1000px){
-  .m-10{
+@media (max-width: 1000px) {
+  .m-10 {
     margin: 0;
-    padding:0;
+    padding: 0;
     margin-bottom: 5px;
   }
 }
