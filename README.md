@@ -1,5 +1,6 @@
 # Angular 5 test project
-Include charts from Chart.js
+Include charts from Chart.js and client width positioning.
+https://productforums.google.com/forum/#!topic/maps/9vYh4mOd0Dg
 
 
 ## Development server
